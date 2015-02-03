@@ -5,7 +5,7 @@ http.createServer(function (request, response) {
 	var query = url.parse(request.url, true)
 	var path = query['pathname'].split('/')
 	var date = new Date(query.query.iso)
-	console.log(date.getTime())
+
 	response.writeHead(200, { 'Content-Type': 'application/json' })
 	if(path[2] == 'parsetime') {
 		var parsetime = { 
